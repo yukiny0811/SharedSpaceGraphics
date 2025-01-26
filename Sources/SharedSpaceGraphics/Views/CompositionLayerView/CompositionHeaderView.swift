@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CompositionHeaderView: View {
     
+    let renderer: MainRenderer
     let composition: Composition
     @Binding var parameterEditorShown: Bool
     
@@ -43,6 +44,20 @@ struct CompositionHeaderView: View {
                 systemNameOn: "eye",
                 systemNameOff: "eye.slash"
             )
+            .padding(.trailing, 3)
+            
+            CompositionHeaderIconToggleButton(
+                isOn: Binding<Bool> {
+                    true
+                } set: { _ in
+                    
+                },
+                systemNameOn: "xmark.circle.fill",
+                systemNameOff: "xmark.circle.fill"
+            )
+            .onTapGesture {
+                renderer.removeScene(id: composition.id)
+            }
             .padding(.trailing, 3)
         }
         .padding(.horizontal, 6)

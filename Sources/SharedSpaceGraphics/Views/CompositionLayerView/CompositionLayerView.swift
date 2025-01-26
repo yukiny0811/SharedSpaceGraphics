@@ -20,7 +20,7 @@ struct CompositionLayerView: View {
         VStack(alignment: .leading, spacing: 0) {
             
             HStack(spacing: 0) {
-                CompositionHeaderView(composition: composition, parameterEditorShown: $parameterEditorShown)
+                CompositionHeaderView(renderer: renderer, composition: composition, parameterEditorShown: $parameterEditorShown)
                     .frame(width: ViewConfigs.layerLeftOffsetWidth, height: ViewConfigs.layerHeight)
                 CompositionTimelineView(timelineWidth: timelineWidth, composition: composition, renderer: renderer)
             }
