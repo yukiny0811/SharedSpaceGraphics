@@ -46,19 +46,18 @@ struct CompositionHeaderView: View {
             )
             .padding(.trailing, 3)
             
-            CompositionHeaderIconToggleButton(
-                isOn: Binding<Bool> {
-                    true
-                } set: { _ in
-                    
-                },
-                systemNameOn: "xmark.circle.fill",
-                systemNameOff: "xmark.circle.fill"
-            )
-            .onTapGesture {
-                renderer.removeScene(id: composition.id)
+            Button {
+                withAnimation {
+                    renderer.removeScene(id: composition.id)
+                }
+            } label: {
+                Image(systemName: "xmark.circle.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: ViewConfigs.layerIconSize, height: ViewConfigs.layerIconSize)
+                    .foregroundStyle(.white.opacity(0.8))
             }
-            .padding(.trailing, 3)
+            .buttonStyle(.plain)
         }
         .padding(.horizontal, 6)
     }
