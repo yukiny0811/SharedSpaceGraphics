@@ -1,0 +1,24 @@
+{
+  "originHash" : "f2682527f9fcdf35a1f1128b69935fa006719833f928c8750c9d35fba5094653",
+  "pins" : [
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax.git",
+      "state" : {
+        "revision" : "0687f71944021d616d34d922343dcef086855920",
+        "version" : "600.0.1"
+      }
+    },
+    {
+      "identity" : "swiftui-tooltip",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/quassum/SwiftUI-Tooltip",
+      "state" : {
+        "revision" : "3bef9a21e2bcf1d0f078ddf6731c3c8996f32c3e",
+        "version" : "1.4.0"
+      }
+    }
+  ],
+  "version" : 3
+}
