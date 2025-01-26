@@ -80,7 +80,7 @@ struct ControlBarView: View {
                 .frame(minWidth: 100, maxWidth: 250)
             }
             
-            Picker("Framerate", selection: $frameRate) {
+            Picker("", selection: $frameRate) {
                 ForEach([Double(30), Double(60), Double(29.97)], id: \.self) { rate in
                     Text(String(format: "%.2f", rate))
                         .tag(rate)
@@ -89,7 +89,7 @@ struct ControlBarView: View {
             .pickerStyle(.palette)
             .frame(minWidth: 150, maxWidth: 250)
             
-            Picker("Export File Type", selection: $exportType) {
+            Picker("", selection: $exportType) {
                 ForEach(ExportFileType.allCases, id: \.self) { fileType in
                     Text(fileType.rawValue)
                         .tag(fileType)
@@ -102,18 +102,29 @@ struct ControlBarView: View {
                 .frame(minWidth: 50, maxWidth: 100)
             
             HStack {
-                Button("Choose Export Folder") {
-                    let openPanel = NSOpenPanel()
-                    openPanel.allowsMultipleSelection = false
-                    openPanel.canChooseDirectories = true
-                    openPanel.canChooseFiles = false
-                    if openPanel.runModal() == .OK {
-                        exportFolderURL = openPanel.url
-                    }
-                }
                 if let exportFolderURL {
-                    Text(exportFolderURL.absoluteString)
-                        .font(.caption)
+                    Button {
+                        let openPanel = NSOpenPanel()
+                        openPanel.allowsMultipleSelection = false
+                        openPanel.canChooseDirectories = true
+                        openPanel.canChooseFiles = false
+                        if openPanel.runModal() == .OK {
+                            self.exportFolderURL = openPanel.url
+                        }
+                    } label: {
+                        Text(exportFolderURL.absoluteString)
+                            .font(.caption)
+                    }
+                } else {
+                    Button("Export Folder (none)") {
+                        let openPanel = NSOpenPanel()
+                        openPanel.allowsMultipleSelection = false
+                        openPanel.canChooseDirectories = true
+                        openPanel.canChooseFiles = false
+                        if openPanel.runModal() == .OK {
+                            exportFolderURL = openPanel.url
+                        }
+                    }
                 }
             }
         }
