@@ -50,6 +50,7 @@ struct SceneLibraryList: View {
                     }
                     .listRowBackground(Color.clear)
                     .frame(maxWidth: .infinity)
+                    .padding(.vertical, 6)
                 }
             }
             .scrollContentBackground(.hidden)
