@@ -201,6 +201,9 @@ public struct MainEditorView: View {
                     }
                 }
             }
+        case "\r":
+            renderer.seekTo(secondsFromStart: 0)
+            renderer.renderingStatus = .requestedSetup
         default:
             return .ignored
         }
