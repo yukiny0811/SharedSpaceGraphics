@@ -113,7 +113,7 @@ public class MainRenderer: NSObject, MTKViewDelegate, @unchecked Sendable {
             composition.scene.initialSetup()
         }
         lastFrameCompositionsCount = compositions.count
-        renderingStatus = .rendering
+        renderingStatus = .paused
     }
     
     func seekTo(secondsFromStart: Double) {
