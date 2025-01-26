@@ -50,10 +50,12 @@ struct SceneLibraryList: View {
                     }
                     .listRowBackground(Color.clear)
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 6)
+                    .padding(.vertical, 3)
+                    .listRowSeparator(.hidden)
                 }
             }
             .scrollContentBackground(.hidden)
+            .listRowSeparator(.hidden)
         }
         .background("222222".color)
     }
