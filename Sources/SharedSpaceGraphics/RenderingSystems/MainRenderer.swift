@@ -217,7 +217,7 @@ public class MainRenderer: NSObject, MTKViewDelegate, @unchecked Sendable {
         let encoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDesc)!
         encoder.endEncoding()
         
-        let globalTimeNormalized = currentSecondsFromStart / videoLength
+        let globalTimeNormalized = globalTimeForExport / videoLength
         let eyeXInterpolated = InterpolationUtils.calculateInterpolated(keyframes: eyeXKeyframes, globalTimeNormalized: globalTimeNormalized, defaultValue: 0.0)
         let eyeYInterpolated = InterpolationUtils.calculateInterpolated(keyframes: eyeYKeyframes, globalTimeNormalized: globalTimeNormalized, defaultValue: 0.0)
         let eyeZInterpolated = InterpolationUtils.calculateInterpolated(keyframes: eyeZKeyframes, globalTimeNormalized: globalTimeNormalized, defaultValue: 0.0)
