@@ -24,6 +24,8 @@ SharedSpaceGraphics is a sophisticated keyframe editor tailored for Metal graphi
 
 Manipulate shader variables using keyframes, allowing precise control over animations and transitions. Additionally, manage camera movements effortlessly to create dynamic and engaging visual effects.
 
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/3b4669cc-5fbd-4cce-8e0f-0d96459dcdc6" />
+
 ### EditableParameter
 
 A Swift Macro that bridges your code with the graphical user interface (GUI). This feature enables seamless synchronization between programmatic parameters and their graphical counterparts, facilitating real-time adjustments and iterations.
