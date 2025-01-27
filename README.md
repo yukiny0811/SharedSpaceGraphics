@@ -48,6 +48,32 @@ class NoiseScene {
 
 Utilize Swift Macros to connect variables across different scenes. This capability supports component reuse, efficient version management, and streamlined collaborative project development, making it easier to handle complex workflows.
 
+### Easy use
+
+```swift
+import SwiftUI
+import SharedSpaceGraphics
+
+@main
+struct DemoApp: App {
+    var body: some Scene {
+        WindowGroup {
+            MainEditorView(
+                width: 1920,
+                height: 1080,
+                displayScaleFactor: 0.5,
+                videoLength: 20,
+                projectDirectoryURL: URL(string: "...")!,
+                scenes: [
+                    NoiseScene.self,
+                    PlainColorScene.self,
+                ]
+            )
+        }
+    }
+}
+```
+
 ## Installation
 
 Use Swift Package Manager.
