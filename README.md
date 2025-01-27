@@ -28,6 +28,20 @@ Manipulate shader variables using keyframes, allowing precise control over anima
 
 A Swift Macro that bridges your code with the graphical user interface (GUI). This feature enables seamless synchronization between programmatic parameters and their graphical counterparts, facilitating real-time adjustments and iterations.
 
+```swift
+import MetalKit
+import SharedSpaceGraphics
+
+@SharedScene
+class NoiseScene {
+    
+    @EditableParameter(min: 0.01, max: 0.2, default: 0.05)
+    var strength: Float
+
+    func render(...) {...}
+}
+```
+
 ### Input and Output Connections
 
 Utilize Swift Macros to connect variables across different scenes. This capability supports component reuse, efficient version management, and streamlined collaborative project development, making it easier to handle complex workflows.
