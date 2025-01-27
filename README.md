@@ -4,6 +4,8 @@
 
 __Keyframe editor for Metal graphics programmer.__   
 
+<img width="1452" alt="image" src="https://github.com/user-attachments/assets/86a0e841-634b-4bdd-a0b0-78bf37d37b69" />
+
 ## Overview 
 
 SharedSpaceGraphics is a sophisticated keyframe editor tailored for Metal graphics programmers. It seamlessly integrates code-based and GUI-based video production, providing a unified platform that enhances efficiency, collaboration, and creativity in graphics development.
